@@ -1,6 +1,7 @@
 package com.codepath.android.booksearch.activities;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,6 +36,10 @@ public class BookDetailActivity extends AppCompatActivity {
                 .load(book.getCoverUrl())
                 .placeholder(R.drawable.ic_nocover)
                 .into(ivBookCover);
+
+        // setting title of book detail activity
+        ActionBar actionBar = getSupportActionBar();
+        getSupportActionBar().setTitle(book.getTitle());
     }
 
 
